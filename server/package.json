@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "janenaki ecommerce webapp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mern",
+    "full",
+    "stack",
+    "app"
+  ],
+  "author": "danielkabagambe@gmail.com",
+  "license": "ISC"
+}
