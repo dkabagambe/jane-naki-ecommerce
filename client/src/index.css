@@ -19,6 +19,11 @@ header a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+
+  /* height: 60px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 2px; */
 }
 .products {
   display: flex;
