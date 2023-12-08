@@ -6,6 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+main {
+  padding: 1rem;
+  text-align: center;
+  font-family: garamond;
+}
 header {
   background-color: #404040;
   padding: 1rem;
@@ -53,4 +58,5 @@ header a {
 .product-item {
   font-weight: 600;
   margin: 10px 0px;
+  font-family: garamond;
 }
