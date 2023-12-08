@@ -69,9 +69,9 @@ header a {
 .product-item button {
   padding: 10px 16px;
   margin-top: 10px;
-  background-color: #218afa; /* Button background color */
+  background-color: #18508b; /* Button background color */
   color: #fff; /* Button text color */
-  border: 1px solid #007bff; /* Button border color */
+  border: 1px solid #18508b; /* Button border color */
   border-radius: 8px; /* Optional: Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
@@ -82,7 +82,7 @@ header a {
 
 /* Change button color on hover */
 .product-item button:hover {
-  background-color: #58a2f0;
+  background-color: #0e66c4;
 }
 
 /* Optional: Style for better accessibility */
