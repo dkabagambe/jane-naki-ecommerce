@@ -10,10 +10,12 @@ function App() {
         <h1>Featured Products</h1>
         <div className="products">
           {data.products.map((product) => (
-            <div key={product.slug} className="products">
+            <div key={product.slug} className="product">
               <img src={product.image} alt={product.name} />
-              <p>{product.name}</p>
-              <p>{product.price}</p>
+              <div className="product-item">
+                <p>{product.name}</p>
+                <p>{product.price}</p>
+              </div>
             </div>
           ))}
         </div>
