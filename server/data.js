@@ -6,7 +6,7 @@ const data = {
       category: "Fashion sneaker's",
       image:
         "https://ug.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/44/700242/1.jpg?3344",
-      price: 39900,
+      price: 25000,
       countInStock: 5,
       brand: "Shoes",
       rating: 1.5,
