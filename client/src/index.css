@@ -12,7 +12,7 @@ main {
   font-family: garamond;
 }
 header {
-  background-color: #e6e6e6f6;
+  background-color: #f6985a;
   padding: 0.5rem;
 }
 header img {
@@ -69,9 +69,9 @@ header img {
 .product-item button {
   padding: 10px 16px;
   margin-top: 10px;
-  background-color: #18508b; /* Button background color */
+  background-color: #66c859; /* Button background color */
   color: #fff; /* Button text color */
-  border: 1px solid #18508b; /* Button border color */
+  border: 1px solid #66c859; /* Button border color */
   border-radius: 8px; /* Optional: Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
@@ -82,7 +82,7 @@ header img {
 
 /* Change button color on hover */
 .product-item button:hover {
-  background-color: #0e66c4;
+  background-color: #175b6e;
 }
 
 /* Optional: Style for better accessibility */

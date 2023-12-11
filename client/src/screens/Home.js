@@ -39,7 +39,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <h1>Featured Products</h1>
+      <h1 style={{ color: "#66C859" }}>Featured Products</h1>
       <div className="products">
         {loading ? (
           <div>loading...</div>

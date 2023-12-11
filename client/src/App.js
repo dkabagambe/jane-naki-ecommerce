@@ -14,9 +14,7 @@ function App() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand href="/">
-                  <img src={logo} alt=" logo" />
-                </Navbar.Brand>
+                <img src={logo} alt=" logo" />
               </LinkContainer>
             </Container>
           </Navbar>
