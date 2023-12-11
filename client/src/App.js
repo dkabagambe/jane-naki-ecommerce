@@ -7,11 +7,12 @@ import { LinkContainer } from "react-router-bootstrap";
 import logo from "./img/logo.png";
 
 function App() {
+  const currentYear = new Date().getFullYear();
   return (
     <BrowserRouter>
-      <div>
+      <div className="d-flex flex-column site-container">
         <header>
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="">
             <Container>
               <LinkContainer to="/">
                 <img src={logo} alt=" logo" />
@@ -20,11 +21,20 @@ function App() {
           </Navbar>
         </header>
         <main>
-          <Routes>
-            <Route path="/product/:slug" element={<Product />} />
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <Container>
+            <Routes>
+              <Route path="/product/:slug" element={<Product />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Container>
         </main>
+        <footer>
+          <div className="text-center">
+            <span className="copy"> &copy; </span>
+            <span className="year">{currentYear} </span>
+            <span className="word">, Jane Naki Sales</span>
+          </div>
+        </footer>
       </div>
     </BrowserRouter>
   );

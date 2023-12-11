@@ -6,8 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.site-container {
+  min-height: 100vh;
+}
 main {
-  padding: 1rem;
+  flex: 1;
   text-align: center;
   font-family: garamond;
 }
@@ -89,4 +92,22 @@ header img {
 .product-item button:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Add a subtle outline on focus */
+}
+
+footer .copy {
+  color: #063263;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+footer .year {
+  color: green;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+footer .word {
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: dosis;
+  color: #063263;
+  text-transform: lowercase;
 }
