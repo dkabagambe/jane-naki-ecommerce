@@ -12,18 +12,13 @@ main {
   font-family: garamond;
 }
 header {
-  background-color: #404040;
-  padding: 1rem;
+  background-color: #e6e6e6f6;
+  padding: 0.5rem;
 }
-header a {
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-
-  /* height: 60px;
-  width: 70px;
-  object-fit: cover;
-  border-radius: 2px; */
+header img {
+  max-height: 80px;
+  max-width: 150px;
+  object-fit: contain;
 }
 .products {
   display: flex;
