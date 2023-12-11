@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 // import data from "../data";
 import { Link } from "react-router-dom";
+
 import axios from "axios";
 const reducer = (state, action) => {
   switch (action.type) {
@@ -40,22 +41,28 @@ const Home = () => {
     <div>
       <h1>Featured Products</h1>
       <div className="products">
-        {products.map((product) => (
-          <div key={product.slug} className="product">
-            <Link to={`/product/${product.slug}`}>
-              <img src={product.image} alt={product.name} />
-            </Link>
-            <div className="product-item">
+        {loading ? (
+          <div>loading...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          products.map((product) => (
+            <div key={product.slug} className="product">
               <Link to={`/product/${product.slug}`}>
-                <p>{product.name}</p>
+                <img src={product.image} alt={product.name} />
               </Link>
-              <p>
-                <strong>Ugx:{product.price}</strong>
-              </p>
-              <button>Add to cart</button>
+              <div className="product-item">
+                <Link to={`/product/${product.slug}`}>
+                  <p>{product.name}</p>
+                </Link>
+                <p>
+                  <strong>Ugx:{product.price}</strong>
+                </p>
+                <button>Add to cart</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );
