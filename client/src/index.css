@@ -93,7 +93,10 @@ header img {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Add a subtle outline on focus */
 }
-
+footer {
+  margin: 1rem;
+  padding: 1rem;
+}
 footer .copy {
   color: #063263;
   font-size: 1.2rem;
