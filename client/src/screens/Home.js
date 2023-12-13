@@ -5,6 +5,8 @@ import Product from "../components/Product";
 import { Helmet } from "react-helmet-async";
 
 import axios from "axios";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -47,9 +49,9 @@ const Home = () => {
       <h1 style={{ color: "#66C859" }}>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>loading...</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
             {products.map((product) => (
