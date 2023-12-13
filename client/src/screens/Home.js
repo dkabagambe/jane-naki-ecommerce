@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Product from "../components/Product";
+import { Helmet } from "react-helmet-async";
 
 import axios from "axios";
 const reducer = (state, action) => {
@@ -40,6 +41,9 @@ const Home = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Jane Naki Sales</title>
+      </Helmet>
       <h1 style={{ color: "#66C859" }}>Featured Products</h1>
       <div className="products">
         {loading ? (
