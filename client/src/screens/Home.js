@@ -1,10 +1,9 @@
 import React, { useEffect, useReducer } from "react";
-// import data from "../data";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import axios from "axios";
 import Product from "../components/Product";
 
+import axios from "axios";
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":

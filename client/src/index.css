@@ -78,13 +78,13 @@ header img {
   background-color: #66c859; /* Button background color */
   color: #fff; /* Button text color */
   border: 1px solid #66c859; /* Button border color */
-  border-radius: 8px; /* Optional: Rounded corners */
+  border-radius: 9px; /* Optional: Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
   font-weight: bold;
   font-family: dosis;
   font-size: 1rem;
-  width: 150px;
+  width: 140px;
 }
 
 /* Change button color on hover */
@@ -117,4 +117,7 @@ footer .word {
   font-family: dosis;
   color: #063263;
   text-transform: lowercase;
+}
+.img-large {
+  max-width: 100%;
 }
