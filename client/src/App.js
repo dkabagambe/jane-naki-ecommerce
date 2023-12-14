@@ -1,12 +1,18 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home";
 import Product from "./screens/Productpage";
 import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { LinkContainer } from "react-router-bootstrap";
 import logo from "./img/logo.png";
+import Badge from "react-bootstrap/esm/Badge";
+import { useContext } from "react";
+import { Store } from "./Store";
 
 function App() {
+  const { state } = useContext(Store);
+  const { cart } = state;
   const currentYear = new Date().getFullYear();
   return (
     <BrowserRouter>
@@ -17,6 +23,16 @@ function App() {
               <LinkContainer to="/">
                 <img src={logo} alt=" logo" />
               </LinkContainer>
+              <Nav className="me-auto">
+                <Link to="/cart" className="nav-link">
+                  Cart
+                  {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.length}
+                    </Badge>
+                  )}
+                </Link>
+              </Nav>
             </Container>
           </Navbar>
         </header>
