@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/esm/ListGroup";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Rating from "../components/Rating";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
@@ -29,6 +29,7 @@ const reducer = (state, action) => {
 };
 
 const Productpage = () => {
+  const navigate = useNavigate();
   const params = useParams();
   const { slug } = params;
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
@@ -65,6 +66,7 @@ const Productpage = () => {
       type: "CART_ADD_ITEM",
       payload: { ...product, quantity },
     });
+    navigate("/cart");
   };
 
   return loading ? (
@@ -95,7 +97,7 @@ const Productpage = () => {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Price : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Price : Ugx{product.price}</ListGroup.Item>
             <ListGroup.Item>
               Description:
               <p>{product.description}</p>
@@ -109,7 +111,7 @@ const Productpage = () => {
                 <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
-                    <Col>${product.price}</Col>
+                    <Col>Ugx{product.price}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>

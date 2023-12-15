@@ -49,7 +49,7 @@ const data = {
       category: "Tv",
       image:
         "https://ug.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/408248/1.jpg?3335",
-      price: 75000,
+      price: 750000,
       countInStock: 10,
       brand: "Tv",
       rating: 4.5,
