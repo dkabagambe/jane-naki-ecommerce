@@ -10,6 +10,7 @@ import Badge from "react-bootstrap/esm/Badge";
 import { useContext } from "react";
 import { Store } from "./Store";
 import CartScreen from "./screens/Cart";
+import SigninScreen from "./screens/Signin";
 
 function App() {
   const { state } = useContext(Store);
@@ -42,6 +43,7 @@ function App() {
             <Routes>
               <Route path="/product/:slug" element={<Product />} />
               <Route path="cart" element={<CartScreen />} />
+              <Route path="/signin" element={<SigninScreen />} />
               <Route path="/" element={<Home />} />
             </Routes>
           </Container>
