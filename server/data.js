@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: "1",
+      // _id: "1",
       name: "Men's Sports Shoes",
       slug: "Men's-Sports-Shoes",
       category: "Fashion sneaker's",
@@ -15,7 +15,7 @@ const data = {
       description: "Men's Sports Shoes-blue",
     },
     {
-      _id: "2",
+      // _id: "2",
       name: "Rosefoam Mattress",
       slug: "Rosefoam-Mattress",
       category: "Mattress",
@@ -29,7 +29,7 @@ const data = {
       description: "Rosefoam 5*12 Bonluxe Mattress",
     },
     {
-      _id: "3",
+      // _id: "3",
       name: "Hp Laptop silver",
       slug: "Hp-laptop-silver",
       category: "Laptop",
@@ -43,7 +43,7 @@ const data = {
       description: "Rosefoam 5*12 Bonluxe Mattress",
     },
     {
-      _id: "4",
+      // _id: "4",
       name: "Hisense Tv",
       slug: "hisense-tv",
       category: "Tv",
@@ -57,7 +57,7 @@ const data = {
       description: "high quality Tv",
     },
     {
-      _id: "5",
+      // _id: "5",
       name: "Mosquito Net Cream",
       slug: "Mosquito-Net-Cream",
       category: "mosquito net",
@@ -71,7 +71,7 @@ const data = {
       description: "Pole Mosquito Net Cream",
     },
     {
-      _id: "6",
+      // _id: "6",
       name: "Hisense 6 Kg Washing Machine",
       slug: "Washing-Machine",
       category: "Appliances",
@@ -85,7 +85,7 @@ const data = {
       description: "easy to was clothes",
     },
     {
-      _id: "7",
+      // _id: "7",
       name: "Apple iPhone 15 Pro Max",
       slug: "Apple-iPhone-15-Pro-Max",
       category: "Apple Phones & Tablets",
@@ -99,7 +99,7 @@ const data = {
       description: "Latest iphone",
     },
     {
-      _id: "8",
+      // _id: "8",
       name: "Kinyara Sweet Sugar",
       slug: "Kinyara-Sweet-Sugar",
       category: "Supermarket",
@@ -113,7 +113,7 @@ const data = {
       description: "Kinyara Irresistibly Sweet Sugar",
     },
     {
-      _id: "9",
+      // _id: "9",
       name: "Door Window Curtains",
       slug: "Door-window-curtains",
       category: "Draperies and curtains",
