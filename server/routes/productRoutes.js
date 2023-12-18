@@ -1,5 +1,5 @@
 import express from "express";
-import Product from "../models/ProductModel";
+import Product from "../models/ProductModel.js";
 
 const productRouter = express.Router();
 
@@ -11,7 +11,7 @@ productRouter.get("/", async (req, res) => {
 productRouter.get("/slug/:slug", async (req, res) => {
   const product = await Product.findOne({ slug: { $eq: req.params.slug } });
   if (product) {
-    res.send(product);
+    res.send(Product);
   } else {
     res.status(404).send({ message: "Product Not Found" });
   }
