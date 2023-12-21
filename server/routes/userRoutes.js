@@ -6,12 +6,13 @@ import User from "../models/userModel.js";
 import { generateToken } from "../utils.js";
 
 const userRouter = express.Router();
-
 userRouter.post(
   "/signin",
   expressAsyncHandler(async (req, res) => {
+    // console.log(req.body);
     const user = await User.findOne({ email: req.body.email });
-    if (User) {
+    console.log("User:", user);
+    if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         res.send({
           _id: user._id,
