@@ -6,6 +6,7 @@ import seedRouter from "./routes/seedRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
+//Secret key 1=EJutl87A9aFu0Cf26DtbDj5AcbdYXKCtkh39GJCDJr9yo17csHKQtUN0_YoyJbStSAMdBNG-n8QeIUFj
 
 dotenv.config();
 mongoose
@@ -21,6 +22,9 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.get("/api/keys/paypal", (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || "sb");
+});
 
 app.use("/api/seed", seedRouter);
 app.use("/api/products", productRouter);
