@@ -14,6 +14,11 @@ main {
   text-align: center;
   font-family: garamond;
 }
+.btn-outline-primary {
+  background-color: #063263;
+  color: #000000;
+  outline: none;
+}
 header {
   background-color: #f6985a;
   padding: 0.5rem;
@@ -116,7 +121,7 @@ footer .word {
   font-weight: 900;
   font-family: dosis;
   color: #063263;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .img-large {
   max-width: 100%;
@@ -135,4 +140,35 @@ footer .word {
 .checkout-steps > div.active {
   border-bottom: 0.2rem solid #f08000;
   color: #f08000;
+}
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #063263;
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+  font-family: garamond;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
+.btn1 {
+  font-size: 20px;
+  background-color: #66c859 !important;
+  text-align: left;
+}
+.text-bold {
+  font-weight: bold;
 }
