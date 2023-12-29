@@ -8,7 +8,7 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/esm/ListGroup";
 import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
-import Rating from "../components/Rating";
+// import Rating from "../components/Rating";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { getError } from "../components/Utilis";
@@ -91,13 +91,13 @@ const Productpage = () => {
               </Helmet>
               <h1>{product.name}</h1>
             </ListGroup.Item>
-            <ListGroup.Item>
+            {/* <ListGroup.Item>
               <Rating
                 rating={product.rating}
                 numReviews={product.numReviews}
               ></Rating>
-            </ListGroup.Item>
-            <ListGroup.Item>Price : Ugx{product.price}</ListGroup.Item>
+            </ListGroup.Item> */}
+            <ListGroup.Item>Price : Ugx {product.price}</ListGroup.Item>
             <ListGroup.Item>
               Description:
               <p>{product.description}</p>

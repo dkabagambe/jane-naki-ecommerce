@@ -20,12 +20,12 @@ productRouter.post(
       slug: "sample-name-" + Date.now(),
       image: "/images/p1.jpg",
       price: 0,
-      category: "sample category",
-      brand: "sample brand",
+      category: "specify the category",
+      brand: "brand name",
       countInStock: 0,
       rating: 0,
       numReviews: 0,
-      description: "sample description",
+      description: "description of the product",
     });
     const product = await newProduct.save();
     res.send({ message: "Product Created", product });

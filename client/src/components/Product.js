@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Rating from "./Rating";
+// import Rating from "./Rating";
 import axios from "axios";
 import { useContext } from "react";
 import { Store } from "../Store";
@@ -35,7 +35,7 @@ function Product(props) {
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
         </Link>
-        <Rating rating={product.rating} numReviews={product.numReviews} />
+        {/* <Rating rating={product.rating} numReviews={product.numReviews} /> */}
         <Card.Text>Ugx{product.price}</Card.Text>
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
