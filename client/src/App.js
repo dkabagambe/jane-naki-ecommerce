@@ -1,7 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Home from "./screens/Home";
-import Product from "./screens/Productpage";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -12,6 +11,7 @@ import logo from "./img/logo.png";
 import Badge from "react-bootstrap/esm/Badge";
 import { useContext, useEffect, useState } from "react";
 import { Store } from "./Store";
+import Productpage from "./screens/Productpage";
 import CartScreen from "./screens/Cart";
 import SigninScreen from "./screens/Signin";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
@@ -172,7 +172,7 @@ function App() {
         <main>
           <Container>
             <Routes>
-              <Route path="/product/:slug" element={<Product />} />
+              <Route path="/product/:slug" element={<Productpage />} />
               <Route path="cart" element={<CartScreen />} />
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />

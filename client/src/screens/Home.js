@@ -36,9 +36,6 @@ const Home = () => {
       } catch (error) {
         dispatch({ type: "FETCH_FAIL", payload: error.message });
       }
-
-      // setProducts(result.data);
-      //Video-18-Create-Signin-Screen
     };
     fetchData();
   }, []);

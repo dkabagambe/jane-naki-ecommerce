@@ -28,6 +28,7 @@ app.get("/api/keys/paypal", (req, res) => {
 app.get("/api/keys/google", (req, res) => {
   res.send({ key: process.env.GOOGLE_API_KEY || "" });
 });
+//this is where am calling the routes from
 app.use("/api/upload", uploadRouter);
 app.use("/api/seed", seedRouter);
 app.use("/api/products", productRouter);

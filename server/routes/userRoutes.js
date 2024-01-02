@@ -87,6 +87,7 @@ userRouter.post(
     res.status(401).send({ message: "Invalid email or password" });
   })
 );
+//this is is the api for registration
 userRouter.post(
   "/signup",
   expressAsyncHandler(async (req, res) => {
