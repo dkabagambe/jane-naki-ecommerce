@@ -33,6 +33,7 @@ const reducer = (state, action) => {
       };
     case "CREATE_FAIL":
       return { ...state, loadingCreate: false };
+
     case "DELETE_REQUEST":
       return { ...state, loadingDelete: true, successDelete: false };
     case "DELETE_SUCCESS":
@@ -46,7 +47,6 @@ const reducer = (state, action) => {
 
     case "DELETE_RESET":
       return { ...state, loadingDelete: false, successDelete: false };
-
     default:
       return state;
   }
@@ -68,9 +68,8 @@ export default function ProductListScreen() {
     loading: true,
     error: "",
   });
-
   const navigate = useNavigate();
-  const { search, pathname } = useLocation();
+  const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const page = sp.get("page") || 1;
 
@@ -134,7 +133,6 @@ export default function ProductListScreen() {
       }
     }
   };
-
   return (
     <div>
       <Row>
@@ -152,6 +150,7 @@ export default function ProductListScreen() {
 
       {loadingCreate && <LoadingBox></LoadingBox>}
       {loadingDelete && <LoadingBox></LoadingBox>}
+
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
