@@ -219,17 +219,17 @@ button.thumbnail {
 }
 .bfooter {
   display: flex;
-  flex-direction: column; /* Arrange child elements vertically */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   padding: 5px;
   text-align: center;
 }
 
 .bfooter p {
-  margin: 1rem 5px; /* Add some vertical margin to separate each paragraph */
-  font-size: 1.2rem; /* Adjust the font size for better readability */
+  margin: 1rem 5px;
+  font-size: 1.2rem;
   font-family: "Adobe Garamond Pro", serif !important;
   color: #000;
 }
@@ -237,8 +237,8 @@ button.thumbnail {
 /* Style the anchor tags within .bfooter */
 .bfooter a {
   color: #000000;
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s; /* Optional: Add transition effect for color change */
+  text-decoration: none;
+  transition: color 0.3s;
   font-weight: 600;
   padding-left: 5px;
   font-family: "Iowan Old Style", serif !important;
@@ -246,7 +246,7 @@ button.thumbnail {
 
 /* Hover effect for anchor tags */
 .bfooter a:hover {
-  color: #063263; /* Change the color on hover (optional) */
+  color: #063263;
 }
 .card-title {
   color: #222 !important;
