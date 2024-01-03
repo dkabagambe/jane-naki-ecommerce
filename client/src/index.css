@@ -75,6 +75,7 @@ header img {
   text-decoration: none;
   font-size: 1.2rem;
   color: #000;
+  font-family: garamond;
 }
 /* Add some spacing around the button */
 .button {
@@ -215,4 +216,40 @@ footer .word {
 }
 button.thumbnail {
   padding: 0;
+}
+.bfooter {
+  display: flex;
+  flex-direction: column; /* Arrange child elements vertically */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.bfooter p {
+  margin: 1rem 5px; /* Add some vertical margin to separate each paragraph */
+  font-size: 1.2rem; /* Adjust the font size for better readability */
+  font-family: garamond;
+  color: #000;
+}
+
+/* Style the anchor tags within .bfooter */
+.bfooter a {
+  color: #000000;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Optional: Add transition effect for color change */
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+/* Hover effect for anchor tags */
+.bfooter a:hover {
+  color: #063263; /* Change the color on hover (optional) */
+}
+.card-title {
+  color: #222 !important;
+  font-family: garamond !important;
+  margin: 10px 0 !important;
+  transition: color 0.3s;
 }

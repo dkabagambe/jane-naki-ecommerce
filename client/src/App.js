@@ -35,6 +35,8 @@ import OrderListScreen from "./screens/OrderListScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import MapScreen from "./screens/MapScreen";
+import ForgetPasswordScreen from "./screens/ForgetPasswordScreen";
+import ResetPasswordScreen from "./screens/ResetPasswordScreen";
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -175,6 +177,14 @@ function App() {
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route
+                path="/forget-password"
+                element={<ForgetPasswordScreen />}
+              />
+              <Route
+                path="/reset-password/:token"
+                element={<ResetPasswordScreen />}
+              />
+              <Route
                 path="/profile"
                 element={
                   <ProtectedRoute>
@@ -267,6 +277,17 @@ function App() {
             </Routes>
           </Container>
         </main>
+        <section className="bfooter">
+          <p>
+            For orders or inquiries, please contact us at:
+            <a href="tel:+2567556885004">+256-755-6885004</a>
+          </p>
+          <p>
+            For further assistance, feel free to email us at:
+            <a href="mailto:janenakisales@gmail.com">Janenakisales@gmail.com</a>
+          </p>
+        </section>
+
         <footer>
           <div className="text-center">
             <span className="copy"> &copy; </span>
