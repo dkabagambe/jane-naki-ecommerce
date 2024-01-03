@@ -125,9 +125,11 @@ footer .word {
 }
 .img-large {
   max-width: 100%;
+  object-fit: cover;
 }
 .img-thumbnail {
   height: 80px;
+  object-fit: cover;
 }
 .small-container {
   max-width: 600px;
