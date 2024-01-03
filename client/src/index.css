@@ -231,7 +231,6 @@ button.thumbnail {
   margin: 1rem 5px; /* Add some vertical margin to separate each paragraph */
   font-size: 1.2rem; /* Adjust the font size for better readability */
   font-family: "Adobe Garamond Pro", serif !important;
-
   color: #000;
 }
 
@@ -242,6 +241,7 @@ button.thumbnail {
   transition: color 0.3s; /* Optional: Add transition effect for color change */
   font-weight: 600;
   padding-left: 5px;
+  font-family: "Iowan Old Style", serif !important;
 }
 
 /* Hover effect for anchor tags */
