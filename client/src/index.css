@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Adobe Garamond Pro", serif !important;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,7 +11,7 @@ body {
 main {
   flex: 1;
   text-align: center;
-  font-family: garamond;
+  font-family: "Adobe Garamond Pro", serif !important;
 }
 .btn-outline-primary {
   background-color: #063263;
@@ -69,13 +68,13 @@ header img {
 .product-item {
   font-weight: 600;
   margin: 10px 0px;
-  font-family: garamond;
+  font-family: "Adobe Garamond Pro", serif !important;
 }
 .product-item a {
   text-decoration: none;
   font-size: 1.2rem;
   color: #000;
-  font-family: garamond;
+  font-family: "Adobe Garamond Pro", serif !important;
 }
 /* Add some spacing around the button */
 .button {
@@ -88,7 +87,7 @@ header img {
   cursor: pointer;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
   font-weight: bold;
-  font-family: dosis;
+  font-family: "Iowan Old Style", serif !important;
   font-size: 1rem;
   width: 140px;
 }
@@ -116,11 +115,12 @@ footer .year {
   color: green;
   font-size: 1.2rem;
   font-weight: 900;
+  padding-left: 10px;
 }
 footer .word {
   font-size: 1.2rem;
   font-weight: 900;
-  font-family: dosis;
+  font-family: "Iowan Old Style", serif !important;
   color: #063263;
   text-transform: capitalize;
 }
@@ -159,7 +159,7 @@ footer .word {
 
 .site-container {
   transition: 0.4s;
-  font-family: garamond;
+  font-family: "Adobe Garamond Pro", serif !important;
 }
 .active-cont {
   margin-left: 240px;
@@ -230,7 +230,8 @@ button.thumbnail {
 .bfooter p {
   margin: 1rem 5px; /* Add some vertical margin to separate each paragraph */
   font-size: 1.2rem; /* Adjust the font size for better readability */
-  font-family: garamond;
+  font-family: "Adobe Garamond Pro", serif !important;
+
   color: #000;
 }
 
@@ -249,7 +250,7 @@ button.thumbnail {
 }
 .card-title {
   color: #222 !important;
-  font-family: garamond !important;
+  font-family: "Libre Garamond", serif !important;
   margin: 10px 0 !important;
   transition: color 0.3s;
 }

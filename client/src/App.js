@@ -291,8 +291,8 @@ function App() {
         <footer>
           <div className="text-center">
             <span className="copy"> &copy; </span>
-            <span className="year">{currentYear} </span>
             <span className="word">Jane Naki Sales</span>
+            <span className="year">{currentYear} </span>
           </div>
         </footer>
       </div>
