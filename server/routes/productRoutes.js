@@ -6,7 +6,7 @@ import { isAuth, isAdmin } from "../utils.js";
 const productRouter = express.Router();
 
 productRouter.get("/", async (req, res) => {
-  const products = await Product.find();
+  const products = await Product.find().sort({ createdAt: -1 }); //it sorts according to the recently posted
   res.send(products);
 });
 
