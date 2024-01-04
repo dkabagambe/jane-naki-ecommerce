@@ -256,13 +256,22 @@ button.thumbnail {
 }
 
 .move-h1 {
+  width: 99%;
   color: #063263;
   padding: 20px;
   font-weight: bolder;
   font-family: "Iowan Old Style", serif !important;
-  transition: transform 0.5s ease-in-out;
 }
 
-.move-h1:hover {
-  transform: translateX(50px);
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.move-h1 {
+  animation: moveRightToLeft 12s linear infinite;
 }
