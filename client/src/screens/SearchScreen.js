@@ -6,7 +6,7 @@ import { getError } from "../components/Utilis";
 import { Helmet } from "react-helmet-async";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Rating from "../components/Rating";
+// import Rating from "../components/Rating";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import Button from "react-bootstrap/Button";
@@ -47,29 +47,33 @@ const prices = [
     name: "Ugx200001 to Ugx1000000",
     value: "200001-1000000",
   },
-];
-
-const ratings = [
   {
-    name: "4stars & up",
-    rating: 4,
-  },
-
-  {
-    name: "3stars & up",
-    rating: 3,
-  },
-
-  {
-    name: "2stars & up",
-    rating: 2,
-  },
-
-  {
-    name: "1stars & up",
-    rating: 1,
+    name: "Ugx1000001 to Ugx10000000",
+    value: "1000001-1000000",
   },
 ];
+
+// const ratings = [
+//   {
+//     name: "4stars & up",
+//     rating: 4,
+//   },
+
+//   {
+//     name: "3stars & up",
+//     rating: 3,
+//   },
+
+//   {
+//     name: "2stars & up",
+//     rating: 2,
+//   },
+
+//   {
+//     name: "1stars & up",
+//     rating: 1,
+//   },
+// ];
 
 export default function SearchScreen() {
   const navigate = useNavigate();
@@ -182,7 +186,7 @@ export default function SearchScreen() {
               ))}
             </ul>
           </div>
-          <div>
+          {/* <div>
             <h3>Avg. Customer Review</h3>
             <ul>
               {ratings.map((r) => (
@@ -204,7 +208,7 @@ export default function SearchScreen() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </Col>
         <Col md={9}>
           {loading ? (
