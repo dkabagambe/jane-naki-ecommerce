@@ -62,7 +62,6 @@ userRouter.post(
   "/forget-password",
   expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
-
     if (user) {
       const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET, {
         expiresIn: "3h",
@@ -77,7 +76,7 @@ userRouter.post(
         .messages()
         .send(
           {
-            from: "jane@mg.janenakisales@gmail.com",
+            from: "janenakisales@gmail.com",
             to: `${user.name} <${user.email}>`,
             subject: `Reset Password`,
             html: ` 

@@ -278,6 +278,11 @@ function App() {
           </Container>
         </main>
         <section className="bfooter">
+          <p style={{ color: "#063263", fontWeight: "500" }}>
+            Jane Naki Sales is an online platform offering quality products
+            delivered nationwide within 2-3 days and providing express delivery
+            (1 day) within Kampala
+          </p>
           <p>
             For orders or inquiries, please contact us at:
             <a href="tel:+2567556885004">+256-755-6885004</a>
