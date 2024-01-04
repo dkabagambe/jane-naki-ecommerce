@@ -254,3 +254,15 @@ button.thumbnail {
   margin: 10px 0 !important;
   transition: color 0.3s;
 }
+
+.move-h1 {
+  color: #063263;
+  padding: 20px;
+  font-weight: bolder;
+  font-family: "Iowan Old Style", serif !important;
+  transition: transform 0.5s ease-in-out;
+}
+
+.move-h1:hover {
+  transform: translateX(50px);
+}
