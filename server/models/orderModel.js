@@ -55,5 +55,3 @@ const orderSchema = new mongoose.Schema(
 
 const Order = mongoose.model("Order", orderSchema);
 export default Order;
-
-//start from Video-51-Email-Order-Receipt
