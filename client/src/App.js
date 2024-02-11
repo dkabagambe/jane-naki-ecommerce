@@ -288,7 +288,7 @@ function App() {
             <a href="tel:+2567556885004">+256-755-685-004</a>
           </p>
           <p>
-            For further assistance, feel free to email us at:
+            For further assistance,feel free to email us at:
             <a href="mailto:janenakisales@gmail.com">Janenakisales@gmail.com</a>
           </p>
         </section>

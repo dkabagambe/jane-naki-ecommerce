@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import SimpleSlider from "../components/SimpleSlider";
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -45,7 +46,10 @@ const Home = () => {
         <title>Jane Naki Sales</title>
       </Helmet>
       <h1 className="move-h1">Jane Naki Sales Ecommerce Platform</h1>
-      <h1 style={{ color: "#66C859" }}>Featured Products</h1>
+      <SimpleSlider />
+      <h1 style={{ color: "#66C859", marginTop: "20px", paddingTop: "20px" }}>
+        Featured Products
+      </h1>
       <div className="products">
         {loading ? (
           <LoadingBox />

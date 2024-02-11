@@ -2,8 +2,9 @@ import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
 import User from "../models/userModel.js";
+import nodemailer from "nodemailer";
 
-import { isAuth, isAdmin, mailgun, payOrderEmailTemplate } from "../utils.js";
+import { isAuth, isAdmin, payOrderEmailTemplate } from "../utils.js";
 import Product from "../models/ProductModel.js";
 
 const orderRouter = express.Router();
@@ -74,6 +75,7 @@ orderRouter.get(
         $group: {
           _id: "$category",
           count: { $sum: 1 },
+          o,
         },
       },
     ]);
@@ -117,6 +119,48 @@ orderRouter.put(
     }
   })
 );
+
+// orderRouter.put(
+//   "/:id/pay",
+//   isAuth,
+//   expressAsyncHandler(async (req, res) => {
+//     const order = await Order.findById(req.params.id).populate(
+//       "user",
+//       "email name"
+//     );
+//     if (order) {
+//       order.isPaid = true;
+//       order.paidAt = Date.now();
+//       order.paymentResult = {
+//         id: req.body.id,
+//         status: req.body.status,
+//         update_time: req.body.update_time,
+//         email_address: req.body.email_address,
+//       };
+//       const updatedOrder = await order.save();
+//       mailgun()
+//         .messages()
+//         .send(
+//           {
+//             from: "janenakisales <amazona@mg.janenakisalesug.com>",
+//             to: `${order.user.name} <${order.user.email}>`,
+//             subject: `New order ${order._id}`,
+//             html: payOrderEmailTemplate(order),
+//           },
+//           (error, body) => {
+//             if (error) {
+//               console.log(error);
+//             } else {
+//               console.log(body);
+//             }
+//           }
+//         );
+//       res.send({ message: "Order Paid", order: updatedOrder });
+//     } else {
+//       res.status(404).send({ message: "Order Not Found" });
+//     }
+//   })
+// );
 orderRouter.put(
   "/:id/pay",
   isAuth,
@@ -135,23 +179,29 @@ orderRouter.put(
         email_address: req.body.email_address,
       };
       const updatedOrder = await order.save();
-      mailgun()
-        .messages()
-        .send(
-          {
-            from: "janenakisales <amazona@mg.janenakisalesug.com>",
-            to: `${order.user.name} <${order.user.email}>`,
-            subject: `New order ${order._id}`,
-            html: payOrderEmailTemplate(order),
-          },
-          (error, body) => {
-            if (error) {
-              console.log(error);
-            } else {
-              console.log(body);
-            }
-          }
-        );
+
+      // Use Nodemailer to send email
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "your-business-email@gmail.com", // Replace with your Gmail address
+          pass: "your-gmail-password", // Replace with your Gmail password
+        },
+      });
+
+      try {
+        await transporter.sendMail({
+          from: "Your Store <your-business-email@gmail.com>",
+          to: `${order.user.name} <${order.user.email}>`, // Preserve original recipient
+          subject: `New order ${order._id}`,
+          // Use existing order content
+          html: payOrderEmailTemplate(order), // Assuming this function generates email content
+        });
+        console.log("Order email sent successfully!");
+      } catch (error) {
+        console.error("Error sending order email:", error);
+      }
+
       res.send({ message: "Order Paid", order: updatedOrder });
     } else {
       res.status(404).send({ message: "Order Not Found" });

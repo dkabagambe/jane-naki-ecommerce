@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Adobe Garamond Pro", serif !important;
-
+  background: linear-gradient(135deg, #dadada, #eaeaea);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,6 +46,7 @@ header img {
   margin: 0.5rem;
   text-align: center;
   place-items: center;
+  /* background: linear-gradient(to bottom, #dadada, #f2f2f2); */
 }
 
 .product img {
@@ -274,4 +275,10 @@ button.thumbnail {
 
 .move-h1 {
   animation: moveRightToLeft 12s linear infinite;
+}
+
+.slider-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
 }
