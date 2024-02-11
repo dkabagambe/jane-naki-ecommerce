@@ -47,7 +47,7 @@ const Home = () => {
       </Helmet>
       <h1 className="move-h1">Jane Naki Sales Ecommerce Platform</h1>
       <SimpleSlider />
-      <h1 style={{ color: "#66C859", marginTop: "20px", paddingTop: "20px" }}>
+      <h1 style={{ color: "#0BDA51", marginTop: "20px", paddingTop: "20px" }}>
         Featured Products
       </h1>
       <div className="products">
