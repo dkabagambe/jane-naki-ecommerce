@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Jane Naki Sales</title>
+        <title>Jane Naki Sales Ecommerce Platform</title>
       </Helmet>
       <h1 className="move-h1">Jane Naki Sales Ecommerce Platform</h1>
       <SimpleSlider />
