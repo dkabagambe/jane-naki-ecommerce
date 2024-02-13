@@ -285,7 +285,7 @@ function App() {
           </p>
           <p>
             For orders or inquiries, please contact us at:
-            <a href="tel:+2567556885004">+256-755-685-004</a>
+            <a href="tel:+256200922041">+256-200-922-041</a>
           </p>
           <p>
             For further assistance,feel free to email us at:
