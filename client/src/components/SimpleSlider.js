@@ -5,6 +5,7 @@ import banner from "../img/banner1.jpeg";
 import banner1 from "../img/banner2.jpeg";
 import banner2 from "../img/banner3.jpeg";
 import banner3 from "../img/banner4.jpeg";
+import banner4 from "../img/banner5.jpeg";
 
 export default function SimpleSlider() {
   var settings = {
@@ -32,6 +33,9 @@ export default function SimpleSlider() {
       </div>
       <div>
         <img src={banner3} alt="Slide 4" className="slider-image" />
+      </div>
+      <div>
+        <img src={banner4} alt="Slide 4" className="slider-image" />
       </div>
     </Slider>
   );

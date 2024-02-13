@@ -140,9 +140,15 @@ export default function SearchScreen() {
       </Helmet>
       <Row>
         <Col md={3}>
-          <h3>Department</h3>
+          <h3>Category</h3>
           <div>
-            <ul>
+            <ul
+              style={{
+                listStyle: "none",
+                textAlign: "left",
+                textTransform: "lowercase",
+              }}
+            >
               <li>
                 <Link
                   className={"all" === category ? "text-bold" : ""}
@@ -165,7 +171,13 @@ export default function SearchScreen() {
           </div>
           <div>
             <h3>Price</h3>
-            <ul>
+            <ul
+              style={{
+                listStyle: "none",
+                textAlign: "left",
+                textTransform: "lowercase",
+              }}
+            >
               <li>
                 <Link
                   className={"all" === price ? "text-bold" : ""}
